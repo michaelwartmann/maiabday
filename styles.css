@@ -1,50 +1,61 @@
-/* File: styles.css */
+/* Clean, modern Webtoon/Storybook Style */
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #0a0a0a; /* Deep charcoal, easier on eyes than pure black */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+    color: #eaeaea;
 }
 
+/* Centers the comic and prevents it from getting too wide on desktop monitors */
 .comic-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.scene {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Creates the parallax scrolling effect */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 5vh 5vw;
-    box-sizing: border-box;
-}
-
-.text-box {
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    margin-bottom: 20px;
-    max-width: 600px;
-    border-left: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    font-size: 1.2rem;
-    line-height: 1.5;
+}
+
+/* Styles each image+text block as a sleek card */
+.panel {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Ensures the image never crops, scales perfectly, and fills the card width */
+.panel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #333;
+}
+
+/* The text area below the image */
+.panel-text {
+    padding: 30px;
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
 .narrator {
-    border-left-color: #f1c40f; 
+    color: #f1c40f; 
     font-style: italic;
-    align-self: center; 
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.maia { border-left-color: #ff9ff3; align-self: flex-start; }
-.mayur { border-left-color: #54a0ff; align-self: flex-start; }
-.mallika { border-left-color: #1dd1a1; align-self: flex-start; }
+.dialogue {
+    margin: 10px 0;
+    padding-left: 15px;
+    border-left: 4px solid #fff;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Character color codes */
+.maia { border-left-color: #ff9ff3; }
+.mayur { border-left-color: #54a0ff; }
+.mallika { border-left-color: #1dd1a1; }
