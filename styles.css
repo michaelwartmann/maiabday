@@ -1,0 +1,50 @@
+/* File: styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+.comic-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates the parallax scrolling effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+}
+
+.text-box {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    border-left: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.narrator {
+    border-left-color: #f1c40f; 
+    font-style: italic;
+    align-self: center; 
+}
+
+.maia { border-left-color: #ff9ff3; align-self: flex-start; }
+.mayur { border-left-color: #54a0ff; align-self: flex-start; }
+.mallika { border-left-color: #1dd1a1; align-self: flex-start; }
